@@ -2,7 +2,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import PageNavigation from '../components/PageNavigation';
-import { Chip, Brain, Milestone, Target, Briefcase } from 'lucide-react';
+import { Monitor, Brain, Milestone, Target, Briefcase } from 'lucide-react';
 
 const SegmentCard = ({ 
   title, 
@@ -71,7 +71,7 @@ const Segments = () => {
             
             <SegmentCard 
               title="HighTech" 
-              icon={Chip}
+              icon={Monitor}
               description="Latest developments in high technology sectors" 
               link="/segments/high-tech"
               bgColor="bg-white"
@@ -100,7 +100,8 @@ const Segments = () => {
         </div>
       </div>
       
-      <style jsx>{`
+      <style>
+        {`
         .segments-title {
           font-size: 2rem;
           font-family: Georgia, serif;
@@ -164,7 +165,8 @@ const Segments = () => {
           border-top-left-radius: 4px;
           border-top-right-radius: 4px;
         }
-      `}</style>
+        `}
+      </style>
     </div>
   );
 };

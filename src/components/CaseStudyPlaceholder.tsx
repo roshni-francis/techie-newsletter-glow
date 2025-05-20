@@ -1,11 +1,11 @@
 
 import React from 'react';
 import PageNavigation from './PageNavigation';
-import { Calendar } from 'lucide-react';
+import { Calendar, LucideIcon } from 'lucide-react';
 
 interface CaseStudyPlaceholderProps {
   title: string;
-  icon: React.ComponentType<{ size?: number; className?: string }>;
+  icon: LucideIcon;
 }
 
 const CaseStudyPlaceholder: React.FC<CaseStudyPlaceholderProps> = ({ title, icon: Icon }) => {
@@ -60,7 +60,8 @@ const CaseStudyPlaceholder: React.FC<CaseStudyPlaceholderProps> = ({ title, icon
         </div>
       </div>
       
-      <style jsx>{`
+      <style>
+        {`
         .segment-title {
           font-size: 2rem;
           font-family: Georgia, serif;
@@ -134,7 +135,8 @@ const CaseStudyPlaceholder: React.FC<CaseStudyPlaceholderProps> = ({ title, icon
           border-top-left-radius: 4px;
           border-top-right-radius: 4px;
         }
-      `}</style>
+        `}
+      </style>
     </div>
   );
 };

@@ -140,7 +140,8 @@ const TableOfContents = () => {
           <div className="issue-number">10</div>
         </div>
 
-        <style jsx>{`
+        <style>
+          {`
           /* Reset styles */
           * {
             margin: 0;
@@ -337,7 +338,8 @@ const TableOfContents = () => {
               margin: 5px;
             }
           }
-        `}</style>
+          `}
+        </style>
       </div>
     </div>
   );
