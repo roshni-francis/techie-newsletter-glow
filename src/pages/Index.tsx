@@ -40,6 +40,33 @@ const Index = () => {
                 
                 .newsletter-container {
                   display: flex;
+                  flex-direction: column;
+                }
+
+                .page-navigation {
+                  display: flex;
+                  justify-content: center;
+                  background-color: #f6f6f6;
+                  border-bottom: 1px solid #c6c6c6;
+                  padding: 10px;
+                }
+
+                .page-navigation a {
+                  padding: 5px 15px;
+                  margin: 0 5px;
+                  color: #024d87;
+                  text-decoration: none;
+                  border-radius: 4px;
+                  transition: all 0.3s ease;
+                }
+
+                .page-navigation a:hover {
+                  background-color: #0370c0;
+                  color: #ffffff;
+                }
+                
+                .main-content {
+                  display: flex;
                   flex-direction: row;
                 }
                 
@@ -48,7 +75,7 @@ const Index = () => {
                   flex: 0 0 40%;
                   padding: 0;
                   position: relative;
-                  background: linear-gradient(135deg, #243949 0%, #517fa4 100%);
+                  background: linear-gradient(135deg, #024d87 0%, #0370c0 100%);
                   color: #fff;
                   display: flex;
                   flex-direction: column;
@@ -120,7 +147,7 @@ const Index = () => {
                 
                 .greeting {
                   font-size: 24px;
-                  color: #243949;
+                  color: #024d87;
                   margin-bottom: 20px;
                   font-weight: 600;
                 }
@@ -137,7 +164,7 @@ const Index = () => {
                 
                 .canvas-chronicles {
                   font-size: 32px;
-                  color: #517fa4;
+                  color: #0370c0;
                   font-weight: 700;
                   margin: 30px 0;
                   letter-spacing: 1px;
@@ -153,11 +180,11 @@ const Index = () => {
                   display: inline-block;
                   position: relative;
                   background: #fff;
-                  border: 2px solid #517fa4;
+                  border: 2px solid #0370c0;
                   border-radius: 20px;
                   padding: 8px 15px;
                   font-size: 14px;
-                  color: #517fa4;
+                  color: #0370c0;
                   font-weight: 600;
                   margin-right: 70px;
                   margin-bottom: 10px;
@@ -171,7 +198,7 @@ const Index = () => {
                   width: 0;
                   height: 0;
                   border: 10px solid transparent;
-                  border-left-color: #517fa4;
+                  border-left-color: #0370c0;
                   border-right: 0;
                   margin-top: -10px;
                   margin-right: -10px;
@@ -180,7 +207,7 @@ const Index = () => {
                 .mascot-character {
                   width: 80px;
                   height: 80px;
-                  background-color: #517fa4;
+                  background-color: #0370c0;
                   border-radius: 50%;
                   display: inline-flex;
                   align-items: center;
@@ -202,7 +229,7 @@ const Index = () => {
                 
                 /* Responsive Design */
                 @media screen and (max-width: 768px) {
-                  .newsletter-container {
+                  .main-content {
                     flex-direction: column;
                   }
                   
@@ -228,59 +255,78 @@ const Index = () => {
                   .canvas-chronicles {
                     font-size: 28px;
                   }
+                  
+                  .page-navigation {
+                    flex-wrap: wrap;
+                  }
+                  
+                  .page-navigation a {
+                    margin: 5px;
+                  }
                 }
               </style>
             </head>
             <body>
               <div class="newsletter-wrapper">
                 <div class="newsletter-container">
-                  <!-- Left Column - Branding -->
-                  <div class="brand-section">
-                    <div class="brand-overlay"></div>
-                    <div class="brand-content">
-                      <div>
-                        <div class="slogan">Engineering the Change</div>
-                        <h1 class="title">DMS <span>NEWSLETTER</span></h1>
-                      </div>
-                      <div>
-                        <div class="version-info">Apr–Sep 2024, FY25 H1, Version 1</div>
-                        <div class="core-values">Purposeful.<br>Agile.<br>Innovation.</div>
-                      </div>
-                    </div>
+                  <!-- Navigation -->
+                  <div class="page-navigation">
+                    <a href="/">Home</a>
+                    <a href="/message-leaders">Message & Leaders</a>
+                    <a href="/du-heads">DU Heads</a>
+                    <a href="/editorial-board">Editorial Board</a>
+                    <a href="/table-of-contents">Contents</a>
                   </div>
-                  
-                  <!-- Right Column - Content -->
-                  <div class="content-section">
-                    <h2 class="greeting">Greetings from DMS Team!</h2>
-                    <div class="message">
-                      <p>We welcome you all to the inaugural edition of the LTTS- DMS Newsletter! 
-                      Through this newsletter we are thrilled to bring you the latest updates 
-                      from our dynamic world of digital manufacturing. In this first edition, we dive into the 
-                      various innovations that are driving our industry forward, showcasing cutting-edge 
-                      technologies and breakthrough solutions that are transforming manufacturing 
-                      processes.</p>
-                      
-                      <p>You'll find highlights of our recent projects, demonstrating our commitment to 
-                      excellence and our ability to deliver superior results. We also feature exciting 
-                      collaborations with industry leaders and partners, reflecting our dedication to 
-                      fostering a collaborative ecosystem that drives mutual growth and success. 
-                      Moreover, we share inspiring stories and experiences from our talented employees, 
-                      giving you a glimpse into the vibrant culture and the passionate people behind our 
-                      achievements.</p>
-                      
-                      <p>Stay tuned for all this and more as we embark on this journey to keep you informed, 
-                      inspired, and connected with the latest in digital manufacturing.</p>
-                      
-                      <p>Happy reading with our first edition of</p>
-                    </div>
-                    <div class="canvas-chronicles">CANVAS CHRONICLES</div>
-                    
-                    <div class="mascot">
-                      <div class="speech-bubble">Techie says Hi!</div>
-                      <div class="mascot-character">👷</div>
+                
+                  <div class="main-content">
+                    <!-- Left Column - Branding -->
+                    <div class="brand-section">
+                      <div class="brand-overlay"></div>
+                      <div class="brand-content">
+                        <div>
+                          <div class="slogan">Engineering the Change</div>
+                          <h1 class="title">DMS <span>NEWSLETTER</span></h1>
+                        </div>
+                        <div>
+                          <div class="version-info">Apr–Sep 2024, FY25 H1, Version 1</div>
+                          <div class="core-values">Purposeful.<br>Agile.<br>Innovation.</div>
+                        </div>
+                      </div>
                     </div>
                     
-                    <div class="issue-number">02</div>
+                    <!-- Right Column - Content -->
+                    <div class="content-section">
+                      <h2 class="greeting">Greetings from DMS Team!</h2>
+                      <div class="message">
+                        <p>We welcome you all to the inaugural edition of the LTTS- DMS Newsletter! 
+                        Through this newsletter we are thrilled to bring you the latest updates 
+                        from our dynamic world of digital manufacturing. In this first edition, we dive into the 
+                        various innovations that are driving our industry forward, showcasing cutting-edge 
+                        technologies and breakthrough solutions that are transforming manufacturing 
+                        processes.</p>
+                        
+                        <p>You'll find highlights of our recent projects, demonstrating our commitment to 
+                        excellence and our ability to deliver superior results. We also feature exciting 
+                        collaborations with industry leaders and partners, reflecting our dedication to 
+                        fostering a collaborative ecosystem that drives mutual growth and success. 
+                        Moreover, we share inspiring stories and experiences from our talented employees, 
+                        giving you a glimpse into the vibrant culture and the passionate people behind our 
+                        achievements.</p>
+                        
+                        <p>Stay tuned for all this and more as we embark on this journey to keep you informed, 
+                        inspired, and connected with the latest in digital manufacturing.</p>
+                        
+                        <p>Happy reading with our first edition of</p>
+                      </div>
+                      <div class="canvas-chronicles">CANVAS CHRONICLES</div>
+                      
+                      <div class="mascot">
+                        <div class="speech-bubble">Techie says Hi!</div>
+                        <div class="mascot-character">👷</div>
+                      </div>
+                      
+                      <div class="issue-number">02</div>
+                    </div>
                   </div>
                 </div>
               </div>
